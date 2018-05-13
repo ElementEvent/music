@@ -1,0 +1,385 @@
+body,
+html {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+ul {
+  margin: 0;
+  padding: 0;
+}
+li {
+  list-style: none;
+}
+a {
+  color: initial;
+  text-decoration: none;
+}
+p {
+  margin: 0;
+}
+header {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 9;
+  height: 1.76rem;
+  /* border-bottom: 1px #ededed solid;*/
+  background-color: #fff;
+  font-size: 0.48rem;
+  text-align: center;
+  line-height: 1.76rem;
+  box-sizing: border-box;
+}
+footer {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  z-index: 9;
+  height: 1.76rem;
+  background: rgba(69, 137, 148, 0.6);
+}
+footer .tabList {
+  width: 100%;
+  height: 100%;
+}
+footer .tabList li {
+  width: 25%;
+  height: 100%;
+  float: left;
+  font-size: 0.36rem;
+  text-align: center;
+}
+footer .tabList li a {
+  color: #fff;
+}
+footer .tabList li i.iconfont {
+  display: block;
+  font-size: 0.88rem;
+  color: #fff;
+}
+#main-index {
+  width: 100%;
+  height: 32.48rem;
+  box-sizing: border-box;
+  padding: 0 0 1.76rem 0;
+  background-color: red;
+  overflow: auto;
+}
+.music-box {
+  box-sizing: border-box;
+  /* padding-top: @headerHeight;*/
+  background-color: #fff;
+  width: 100%;
+  height: 100%;
+  top: 0;
+}
+.music-box .music-list {
+  box-sizing: border-box;
+  padding: 0;
+  font-size: 0.56rem;
+  color: #fff;
+  height: 100%;
+  background-color: rgba(69, 137, 148, 0.5);
+}
+.music-box .music-list li {
+  padding: 0.4rem;
+  border-bottom: 0.02rem solid #fff;
+  position: relative;
+}
+.music-box .music-list li .list {
+  position: relative;
+  z-index: 4;
+}
+.music-box .music-list li .schedule {
+  position: absolute;
+  width: 0;
+  height: 100%;
+  padding: 0.7rem;
+  top: 0;
+  left: 0;
+  background-color: rgba(69, 137, 148, 0.4);
+  text-align: right;
+  box-sizing: border-box;
+  -webkit-transition: all 1s ;
+  -moz-transition: all 1s ;
+  -ms-transition: all 1s ;
+  -o-transition: all 1s ;
+  transition: all 1s ;
+}
+.music-box .music-list li .user-name {
+  font-size: 0.24rem;
+}
+.music-box .music-body {
+  width: 11rem;
+  height: 18rem;
+  background-color: #458994;
+  margin: 1rem auto 0 auto;
+  position: relative;
+  box-shadow: 0 0 10px 0px rgba(69, 137, 148, 0.7);
+  animation-play-state: paused;
+  animation: shadowShow 10s cubic-bezier(0.64, 0.67, 0.83, 0.67) infinite;
+}
+.music-box .music-body .img-bg {
+  width: 100%;
+  height: 100%;
+  /*  -webkit-filter: blur(10px); !* Chrome, Opera *!
+     -moz-filter: blur(10px);
+     -ms-filter: blur(10px);*/
+  overflow: hidden;
+  opacity: 1;
+}
+.music-box .music-body .img-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: blur(25px);
+}
+.music-box .music-body .music-geci {
+  width: 100%;
+  height: 80%;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.56rem;
+  position: absolute;
+  overflow: hidden;
+  margin-top: 20%;
+  left: 0;
+  top: 0;
+  text-align: center;
+  z-index: 5;
+  box-sizing: border-box;
+}
+.music-box .music-body .music-geci .geci-body {
+  padding-top: 50%;
+}
+.music-box .music-body .music-geci .geci-body #geci {
+  -webkit-transition: all 0.5s ;
+  -moz-transition: all 0.5s ;
+  -ms-transition: all 0.5s ;
+  -o-transition: all 0.5s ;
+  transition: all 0.5s ;
+  position: relative;
+}
+.music-box .music-body .music-geci .geci-body #geci div {
+  box-sizing: border-box;
+  padding: 0.3rem 0.6rem;
+  -webkit-transition: all 0.125s 0.125s;
+  -moz-transition: all 0.125s 0.125s;
+  -ms-transition: all 0.125 0.125s;
+  -o-transition: all 0.125s 0.125s;
+  transition: all 0.125s 0.125s;
+}
+.music-box .music-body .music-geci .geci-body #geci div.active {
+  color: #fff;
+  font-size: 0.6rem;
+  padding: 0.3rem 0.1rem;
+  font-weight: bold;
+  -webkit-transition: all 0.125s 0.125s;
+  -moz-transition: all 0.125s 0.125s;
+  -ms-transition: all 0.125 0.125s;
+  -o-transition: all 0.125s 0.125s;
+  transition: all 0.125s 0.125s;
+}
+.muisc-parent-box {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 100%;
+  z-index: 5;
+}
+.muisc-parent {
+  position: absolute;
+  top: 0;
+  z-index: 5;
+  -webkit-transition: top 1s ;
+  -moz-transition: top 1s ;
+  -ms-transition: top 1s ;
+  -o-transition: top 1s ;
+  transition: top 1s ;
+  background-color: #fff;
+  width: 100%;
+  height: 100%;
+}
+.muisc-parent.top {
+  top: -100%;
+}
+.music-bg {
+  /*  background: -webkit-radial-gradient(red, green, blue); !* Safari 5.1 - 6.0 *!
+  background: -o-radial-gradient(red, green, blue); !* Opera 11.6 - 12.0 *!
+  background: -moz-radial-gradient(red, green, blue); !* Firefox 3.6 - 15 *!*/
+  background: radial-gradient(#458994, rgba(69, 137, 148, 0.7), rgba(69, 137, 148, 0.4));
+  border-top: 1px solid transparent;
+}
+.music-bg .music-btn-body {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4rem;
+  background-color: transparent;
+  /*播放进度*/
+  /*播放按钮*/
+  /*留言与机藏*/
+}
+.music-bg .music-btn-body .plan-box {
+  box-sizing: border-box;
+  padding: 0 2rem;
+  margin-top: 0.25rem;
+}
+.music-bg .music-btn-body .plan-box .plan {
+  width: 100%;
+  height: 3px;
+  background-color: #fff;
+}
+.music-bg .music-btn-body .plan-box .plan .new-plan {
+  width: 0;
+  height: 100%;
+  background-color: #458994;
+  position: relative;
+}
+.music-bg .music-btn-body .plan-box .plan .new-plan i {
+  position: absolute;
+  right: 0;
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+  box-sizing: border-box;
+  border: 1px solid #458994;
+  border-radius: 50%;
+  top: -3.5px;
+}
+.music-bg .music-btn-body .btn-body {
+  box-sizing: border-box;
+  padding: 0 2rem;
+  margin-top: 0.5rem;
+  position: relative;
+}
+.music-bg .music-btn-body .btn-body i {
+  width: 33.33%;
+  display: block;
+  float: left;
+  font-size: 1.2rem;
+  color: #458994;
+}
+.music-bg .music-btn-body .btn-body i:nth-of-type(1) {
+  text-align: right;
+}
+.music-bg .music-btn-body .btn-body i:nth-of-type(2) {
+  text-align: center;
+}
+.music-bg .music-btn-body .btn-body i:nth-of-type(3) {
+  text-align: left;
+}
+.music-bg .music-btn-body .btn-body .time {
+  position: absolute;
+  font-size: 0.48rem;
+  color: #458994;
+  top: 0.3rem;
+}
+.music-bg .music-btn-body .btn-body .time:first-child {
+  left: 2rem;
+}
+.music-bg .music-btn-body .btn-body .time:last-child {
+  right: 2rem;
+}
+.music-bg .music-btn-body .music-collect-body {
+  width: 100%;
+  height: 1.5rem;
+  line-height: 1.5rem;
+  text-align: center;
+  color: #458994;
+}
+.music-bg .music-btn-body .music-collect-body i {
+  font-size: 1rem;
+}
+.music-bg .music-btn-body .music-collect-body i:last-child {
+  margin-left: 0.6rem;
+}
+.music-bg .music-btn-body .music-collect-body i:first-child {
+  margin-right: 0.6rem;
+}
+.music-header {
+  background-color: transparent;
+  color: #fff;
+}
+.music-list-header {
+  background-color: #458994;
+  color: #fff;
+}
+.mini-muisc-box {
+  position: absolute;
+  top: -2.4rem;
+  background-color: rgba(69, 137, 148, 0.5);
+  width: 100%;
+  height: 2.4rem;
+  padding: 0.4rem;
+}
+.mini-muisc-box > img {
+  width: 1.6rem;
+  height: 1.6rem;
+  border-radius: 0.12rem;
+  object-fit: cover;
+  float: left;
+}
+.mini-muisc-box .mini-singer {
+  float: left;
+  height: 100%;
+  width: 6rem;
+  font-size: 0.48rem;
+  color: #fff;
+  box-sizing: border-box;
+  padding-left: 0.4rem;
+}
+.mini-muisc-box .iconfont {
+  color: #fff;
+  font-size: 1.36rem;
+  float: right;
+  line-height: 1.6rem;
+  margin-right: 0.5rem;
+}
+/*阴影动画*/
+@keyframes shadowShow {
+  0% {
+    box-shadow: -5px -5px 10px 0px rgba(69, 137, 148, 0.7);
+  }
+  25% {
+    box-shadow: 5px 0 10px 0px rgba(69, 137, 148, 0.7);
+  }
+  50% {
+    box-shadow: 5px 5px 10px 0px rgba(69, 137, 148, 0.7);
+  }
+  75% {
+    box-shadow: -5px 5px 10px 0px rgba(69, 137, 148, 0.7);
+  }
+  100% {
+    box-shadow: -5px -5px 10px 0px rgba(69, 137, 148, 0.7);
+  }
+}
+.index-bg {
+  width: 100%;
+  overflow-y: auto;
+  position: relative;
+}
+.index-bg div {
+  width: 100%;
+  height: 1300px;
+  position: relative;
+  overflow: hidden;
+}
+.index-bg div:nth-of-type(1) {
+  background: transparent url(1.png) no-repeat center center;
+  background-attachment: fixed;
+}
+.index-bg div:nth-of-type(2) {
+  background: red url(2.png) no-repeat center center;
+  background-attachment: fixed;
+}
+.index-bg div:nth-of-type(3) {
+  background: transparent url(3.png) no-repeat center center;
+  background-attachment: fixed;
+}
+/*# sourceMappingURL=index.css.map */
